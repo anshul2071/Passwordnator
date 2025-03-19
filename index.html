@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+        </div>
+        <h1>Random Password Generator</h1>
+        <p>Create strong and secure passwords to keep your account safe online.</p>
+        
+        <div class="password-box">
+            <input type="text" id="password" readonly>
+            <button id="refresh">&#x21bb;</button>
+            <span id="strength"></span>
+        </div>
+        
+        <div class="controls">
+            <label>Password length: <span id="lengthValue">12</span></label>
+            <input type="range" id="length" min="0" max="64" value="8">
+            
+            <div class="checkboxes">
+                <label><input type="checkbox" id="uppercase" checked> ABC</label>
+                <label><input type="checkbox" id="lowercase" checked> abc</label>
+                <label><input type="checkbox" id="numbers" checked> 123</label>
+                <label><input type="checkbox" id="symbols"> #$&</label>
+            </div>
+        </div>
+        
+        <button id="generate">Generate Password</button>
+        <button id="copy">Copy</button>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
